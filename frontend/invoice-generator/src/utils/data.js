@@ -50,3 +50,31 @@ export const TESTIMONIALS = [
     avatar: "https://placehold.co/100x100/000000/ffffff?text=PJ",
   },
 ];
+
+export const FAQS = [
+  {
+    question: "How does the AI invoice creation work?",
+    answer:
+      "Our AI analyzes the text, email, or receipt you provide and automatically extracts relevant details to generate a professional invoice in seconds.",
+  },
+  {
+    question: "Is my data secure?",
+    answer:
+      "Yes, we use industry-standard encryption to protect your data and never share your information with third parties.",
+  },
+  {
+    question: "Can I customize the invoices?",
+    answer:
+      "Absolutely! You can edit invoice details, add your logo, and adjust formatting before sending or downloading.",
+  },
+  {
+    question: "How do I send payment reminders?",
+    answer:
+      "With a single click, you can generate and send polite, effective payment reminder emails for overdue invoices.",
+  },
+  {
+    question: "Is there a free trial available?",
+    answer:
+      "Yes, you can try all features for free with our 14-day trial. No credit card required.",
+  },
+];
