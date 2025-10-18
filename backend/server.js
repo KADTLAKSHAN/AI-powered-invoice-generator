@@ -4,6 +4,8 @@ const cors = require("cors");
 const path = require("path");
 const connectDB = require("./config/db");
 
+const authRoutes = require("./routes/authRoutes");
+
 const app = express();
 
 // Middleware to handle CORS
@@ -22,6 +24,7 @@ connectDB();
 app.use(express.json());
 
 // Define routes
+app.use("/api/auth", authRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
