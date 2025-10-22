@@ -10,7 +10,7 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   const user = { name: "Alex", email: "alex@timetoprogram.com" };
   const logout = () => {};
 
