@@ -1,10 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom";
 import DashboardLayout from "../layout/DashboardLayout";
+import { useAuth } from "../../context/AuthContext";
 
 const ProtectedRoute = ({ children }) => {
   // WILL INTEGRATE THESE VALUES LATER
-  const isAuthenticated = true;
-  const loading = false;
+  const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
     // SPINNER HERE
