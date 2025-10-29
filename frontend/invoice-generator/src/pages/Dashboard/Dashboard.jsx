@@ -5,6 +5,7 @@ import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import Button from "../../components/ui/Button";
 import moment from "moment";
+import AIInsightsCard from "../../components/AIInsightsCard";
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -124,9 +125,10 @@ const Dashboard = () => {
       </div>
 
       {/* AI Insights Card */}
+      <AIInsightsCard />
 
       {/* Recent Invoices */}
-      <div className="w-full bg-white border border-slate-700 rounded-lg shadow-sm shadow-gray-100 overflow-hidden">
+      <div className="w-full bg-white border border-slate-200 rounded-lg shadow-sm shadow-gray-100 overflow-hidden">
         <div className="px-4 sm:px-6 py-4 border-b border-slate-200 bg-slate-50 flex justify-between items-center ">
           <h3 className="text-lg font-semibold text-slate-900">
             Recent Invoices
@@ -206,7 +208,7 @@ const Dashboard = () => {
               You haven't created any invoices yet. Get started by creating your
               first one.
             </p>
-            <Button onClick={() => navigate("/invoices/new")} icon={Plus}>
+            <Button onClick={() => navigate("/invoices/new")} Icon={Plus}>
               Create Invoice
             </Button>
           </div>
