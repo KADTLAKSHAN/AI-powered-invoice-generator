@@ -52,7 +52,17 @@ const AllInvoices = () => {
     fetchInvoices();
   }, []);
 
-  const handleDelete = async (id) => {};
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure you want to delete this invoice?")) {
+      try {
+        await axiosInstance.delete(API_PATHS.INVOICE.DELETE_INVOICE(id));
+        setInvoices(invoices.filter((invoice) => invoice._id !== id));
+      } catch (error) {
+        setError("Failed to delete invoice.");
+        console.error(error);
+      }
+    }
+  };
 
   const handleStatusChange = async (invoice) => {};
 
